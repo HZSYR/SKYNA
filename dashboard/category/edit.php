@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input class="form-control form-control-dark w-100" type="text" placeholder="SKYNA STUDIO" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#"><span data-feather="arrow-left"></span>Log out</a>
+                <a class="nav-link px-3" href="#"><span data-feather="log-out"></span>Log out</a>
             </div>
         </div>
     </header>
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link active" aria-current="page" href="../">
+                                <a class="nav-link" aria-current="page" href="../">
                                     <span data-feather="home"></span>
                                     Dashboard
                                 </a>
@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="index.php">
+                                <a class="nav-link active" href="index.php">
                                     <span data-feather="grid"></span>
                                     Category
                                 </a>
@@ -136,17 +136,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../logo/header.php">
                                     <span data-feather="image"></span>
-                                    Logo Header
-                                </a>
-                            </h5>
-                        </li>
-                        <li class="nav-item">
-                            <h5>
-                                <a class="nav-link" href="#">
-                                    <span data-feather="image"></span>
-                                    Logo Footer
+                                    Logo 
                                 </a>
                             </h5>
                         </li>

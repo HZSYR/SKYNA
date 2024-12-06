@@ -1,9 +1,9 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
 
 
 <!-- Mirrored from htmldemo.net/flosun/flosun/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:14 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-   
+
     <!-- CSS
 	============================================ -->
     <!-- Bootstrap CSS -->
@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
 
     <!-- Header Area Start Here -->
@@ -73,14 +74,14 @@
                             </ul>
                         </nav>
                     </div>
-                  
-        <!-- Main Header Area End -->
-        <!-- off-canvas menu start -->
-       
-        <!-- off-canvas menu end -->
-        <!-- off-canvas menu start -->
-        
-        <!-- off-canvas menu end -->
+
+                    <!-- Main Header Area End -->
+                    <!-- off-canvas menu start -->
+
+                    <!-- off-canvas menu end -->
+                    <!-- off-canvas menu start -->
+
+                    <!-- off-canvas menu end -->
     </header>
     <!-- Header Area End Here -->
     <!-- Slider/Intro Section Start -->
@@ -115,7 +116,7 @@
     </div>
     <!-- Slider/Intro Section End -->
     <!--Categories Area Start-->
-   
+
     <style>
         .buttonpesan {
             width: 17%;
@@ -129,8 +130,6 @@
             font-weight: bold;
             transition: background 0.3s ease;
         }
-
-        
     </style>
     <!--Categories Area End-->
     <!--Product Area Start-->
@@ -142,7 +141,7 @@
                     <div class="section-title text-center mb-30">
                         <span class="section-title-1">Hadiah yang luar biasa</span>
                         <h3 class="section-title-3">Produk Pilihan </h3>
-                        
+
                     </div>
                 </div>
                 <!--Section Title End-->
@@ -469,23 +468,23 @@
                                 <div class="single-product position-relative mb-30">
                                     <div class="product-image">
                                         <a class="d-block" href="product-details.html">
-                                            
+
                                         </a>
                                         <div class="add-action d-flex flex-column position-absolute">
-                                            
+
                                         </div>
                                     </div>
                                     <div class="product-content">
                                         <div class="product-title">
-                                            
+
                                         </div>
                                         <div class="product-rating">
-                                          
+
                                         </div>
                                         <div class="price-box">
-                                            
+
                                         </div>
-                                       
+
                                     </div>
                                 </div>
                                 <!--Single Product End-->
@@ -493,23 +492,23 @@
                                 <div class="single-product position-relative mb-30">
                                     <div class="product-image">
                                         <a class="d-block" href="product-details.html">
-                                            
+
                                         </a>
                                         <div class="add-action d-flex flex-column position-absolute">
-                                           
+
                                         </div>
                                     </div>
                                     <div class="product-content">
                                         <div class="product-title">
-                                           
+
                                         </div>
                                         <div class="product-rating">
-                                           
+
                                         </div>
                                         <div class="price-box">
-                                         
+
                                         </div>
-                                       
+
                                     </div>
                                 </div>
                                 <!--Single Product End-->
@@ -518,277 +517,277 @@
                                 <!--Single Product Start-->
                                 <div class="single-product position-relative mb-30">
                                     <div class="product-image">
-                                        
+
                                         </a>
                                         <div class="add-action d-flex flex-column position-absolute">
-                                         
+
                                         </div>
                                     </div>
                                     <div class="product-content">
                                         <div class="product-title">
-                                            
+
                                         </div>
                                         <div class="product-rating">
-                                           
+
                                         </div>
                                         <div class="price-box">
-                                          
+
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <!--Single Product End-->
                                 <!--Single Product Start-->
-                               
-                        <!-- Slider pagination -->
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Product Area End-->
-    <!-- Product Countdown Area Start Here -->
-    <div class="product-countdown-area mt-text-3">
-        <div class="container custom-area">
-            <div class="row">
-                <!--Section Title Start-->
-                <div class="col-12 col-custom">
-                    <div class="section-title text-center mb-30">
-                        <h3 class="section-title-3">Promo Hari ini</h3>
-                        <a class="buttonpesan" href="pesan.html"><button>Belanja Sekarang</button></a>
-                    </div>
-                    
-                </div>
-                <!--Section Title End-->
-            </div>
-            <div class="row">
-                <!--Countdown Start-->
-                <div class="col-12 col-custom">
-                    
-                </div>
-                <!--Countdown End-->
-            </div>
-            <div class="row product-row">
-                <div class="col-12 col-custom">
-                    <div class="item-carousel-2 swiper-container anime-element-multi product-area">
-                        <div class="swiper-wrapper">
-                            <div class="single-item swiper-slide">
-                                <!--Single Product Start-->
-                                <div class="single-product position-relative mb-30">
-                                    <div class="product-image">
-                                        <a class="d-block" href="product-details.html">
-                                            <img src="assets/images/product/1.jpg" alt="" class="product-image-1 w-100">
-                                            <img src="assets/images/product/2.jpg" alt="" class="product-image-2 position-absolute w-100">
-                                        </a>
-                                        <span class="onsale">Sale!</span>
-                                        <div class="add-action d-flex flex-column position-absolute">
-                                            <a href="compare.html" title="Compare">
-                                                <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
-                                            </a>
-                                            <a href="wishlist.html" title="Add To Wishlist">
-                                                <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
-                                            </a>
-                                            <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-title">
-                                            <h4 class="title-2"> <a href="product-details.html">Bunga tongkat merah muda</a></h4>
-                                        </div>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="regular-price ">Rp250.000</span>
-                                            <span class="old-price"><del>Rp350.000</del></span>
-                                        </div>
-                                        <a href="https://wa.me/6282288985217?text=Halo%2C%20saya%20ingin%20bertanya" target="_blank" class="btn product-cart">Masukkan ke keranjang</a>
-                                    </div>
-                                </div>
-                                <!--Single Product End-->
-                            </div>
-                            <div class="single-item swiper-slide">
-                                <!--Single Product Start-->
-                                <div class="single-product position-relative mb-30">
-                                    <div class="product-image">
-                                        <a class="d-block" href="product-details.html">
-                                            <img src="assets/images/product/5.jpg" alt="" class="product-image-1 w-100">
-                                            <img src="assets/images/product/6.jpg" alt="" class="product-image-2 position-absolute w-100">
-                                        </a>
-                                        <div class="add-action d-flex flex-column position-absolute">
-                                            <a href="compare.html" title="Compare">
-                                                <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
-                                            </a>
-                                            <a href="wishlist.html" title="Add To Wishlist">
-                                                <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
-                                            </a>
-                                            <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-title">
-                                            <h4 class="title-2"> <a href="product-details.html">Buang putih</a></h4>
-                                        </div>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="regular-price ">Rp250.000</span>
-                                            <span class="old-price"><del>Rp350.000</del></span>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!--Single Product End-->
-                            </div>
-                            <div class="single-item swiper-slide">
-                                <!--Single Product Start-->
-                                <div class="single-product position-relative mb-30">
-                                    <div class="product-image">
-                                        <a class="d-block" href="product-details.html">
-                                            <img src="assets/images/product/7.jpg" alt="" class="product-image-1 w-100">
-                                            <img src="assets/images/product/8.jpg" alt="" class="product-image-2 position-absolute w-100">
-                                        </a>
-                                        <div class="add-action d-flex flex-column position-absolute">
-                                            <a href="compare.html" title="Compare">
-                                                <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
-                                            </a>
-                                            <a href="wishlist.html" title="Add To Wishlist">
-                                                <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
-                                            </a>
-                                            <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-title">
-                                            <h4 class="title-2"> <a href="product-details.html">Bunga mekar</a></h4>
-                                        </div>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="regular-price ">Rp250.000</span>
-                                            <span class="old-price"><del>Rp350.000</del></span>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!--Single Product End-->
-                            </div>
-                            <div class="single-item swiper-slide">
-                                <!--Single Product Start-->
-                                <div class="single-product position-relative mb-30">
-                                    <div class="product-image">
-                                        <a class="d-block" href="product-details.html">
-                                            <img src="assets/images/product/3.jpg" alt="" class="product-image-1 w-100">
-                                            <img src="assets/images/product/4.jpg" alt="" class="product-image-2 position-absolute w-100">
-                                        </a>
-                                        <div class="add-action d-flex flex-column position-absolute">
-                                            <a href="compare.html" title="Compare">
-                                                <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
-                                            </a>
-                                            <a href="wishlist.html" title="Add To Wishlist">
-                                                <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
-                                            </a>
-                                            <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-title">
-                                            <h4 class="title-2"> <a href="product-details.html">Tongkat bunga merah</a></h4>
-                                        </div>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="regular-price ">Rp250.000</span>
-                                            <span class="old-price"><del>Rp350.000</del></span>
-                                        </div>
-                                      
-                                    </div>
-                                </div>
-                                <!--Single Product End-->
-                            </div>
-                            <div class="single-item swiper-slide">
-                                <!--Single Product Start-->
-                                <div class="single-product position-relative mb-30">
-                                    <div class="product-image">
-                                        <a class="d-block" href="product-details.html">
-                                            <img src="assets/images/product/8.jpg" alt="" class="product-image-1 w-100">
-                                            <img src="assets/images/product/7.jpg" alt="" class="product-image-2 position-absolute w-100">
-                                        </a>
-                                        <div class="add-action d-flex flex-column position-absolute">
-                                            <a href="compare.html" title="Compare">
-                                                <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
-                                            </a>
-                                            <a href="wishlist.html" title="Add To Wishlist">
-                                                <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
-                                            </a>
-                                            <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="product-title">
-                                            <h4 class="title-2"> <a href="product-details.html">Buket mawar putih</a></h4>
-                                        </div>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="regular-price ">Rp250.000</span>
-                                            <span class="old-price"><del>Rp350.000</del></span>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!--Single Product End-->
+
+                                <!-- Slider pagination -->
+
                             </div>
                         </div>
-                        <!-- Slider pagination -->
-                        <div class="swiper-pagination default-pagination"></div>
                     </div>
                 </div>
             </div>
+            <!--Product Area End-->
+            <!-- Product Countdown Area Start Here -->
+            <div class="product-countdown-area mt-text-3">
+                <div class="container custom-area">
+                    <div class="row">
+                        <!--Section Title Start-->
+                        <div class="col-12 col-custom">
+                            <div class="section-title text-center mb-30">
+                                <h3 class="section-title-3">Promo Hari ini</h3>
+                                <a class="buttonpesan" href="pesan.html"><button>Belanja Sekarang</button></a>
+                            </div>
+
+                        </div>
+                        <!--Section Title End-->
+                    </div>
+                    <div class="row">
+                        <!--Countdown Start-->
+                        <div class="col-12 col-custom">
+
+                        </div>
+                        <!--Countdown End-->
+                    </div>
+                    <div class="row product-row">
+                        <div class="col-12 col-custom">
+                            <div class="item-carousel-2 swiper-container anime-element-multi product-area">
+                                <div class="swiper-wrapper">
+                                    <div class="single-item swiper-slide">
+                                        <!--Single Product Start-->
+                                        <div class="single-product position-relative mb-30">
+                                            <div class="product-image">
+                                                <a class="d-block" href="product-details.html">
+                                                    <img src="assets/images/product/1.jpg" alt="" class="product-image-1 w-100">
+                                                    <img src="assets/images/product/2.jpg" alt="" class="product-image-2 position-absolute w-100">
+                                                </a>
+                                                <span class="onsale">Sale!</span>
+                                                <div class="add-action d-flex flex-column position-absolute">
+                                                    <a href="compare.html" title="Compare">
+                                                        <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
+                                                    </a>
+                                                    <a href="wishlist.html" title="Add To Wishlist">
+                                                        <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
+                                                    </a>
+                                                    <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                                        <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-title">
+                                                    <h4 class="title-2"> <a href="product-details.html">Bunga tongkat merah muda</a></h4>
+                                                </div>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <div class="price-box">
+                                                    <span class="regular-price ">Rp250.000</span>
+                                                    <span class="old-price"><del>Rp350.000</del></span>
+                                                </div>
+                                                <a href="https://wa.me/6282288985217?text=Halo%2C%20saya%20ingin%20bertanya" target="_blank" class="btn product-cart">Masukkan ke keranjang</a>
+                                            </div>
+                                        </div>
+                                        <!--Single Product End-->
+                                    </div>
+                                    <div class="single-item swiper-slide">
+                                        <!--Single Product Start-->
+                                        <div class="single-product position-relative mb-30">
+                                            <div class="product-image">
+                                                <a class="d-block" href="product-details.html">
+                                                    <img src="assets/images/product/5.jpg" alt="" class="product-image-1 w-100">
+                                                    <img src="assets/images/product/6.jpg" alt="" class="product-image-2 position-absolute w-100">
+                                                </a>
+                                                <div class="add-action d-flex flex-column position-absolute">
+                                                    <a href="compare.html" title="Compare">
+                                                        <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
+                                                    </a>
+                                                    <a href="wishlist.html" title="Add To Wishlist">
+                                                        <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
+                                                    </a>
+                                                    <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                                        <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-title">
+                                                    <h4 class="title-2"> <a href="product-details.html">Buang putih</a></h4>
+                                                </div>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <div class="price-box">
+                                                    <span class="regular-price ">Rp250.000</span>
+                                                    <span class="old-price"><del>Rp350.000</del></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Single Product End-->
+                                    </div>
+                                    <div class="single-item swiper-slide">
+                                        <!--Single Product Start-->
+                                        <div class="single-product position-relative mb-30">
+                                            <div class="product-image">
+                                                <a class="d-block" href="product-details.html">
+                                                    <img src="assets/images/product/7.jpg" alt="" class="product-image-1 w-100">
+                                                    <img src="assets/images/product/8.jpg" alt="" class="product-image-2 position-absolute w-100">
+                                                </a>
+                                                <div class="add-action d-flex flex-column position-absolute">
+                                                    <a href="compare.html" title="Compare">
+                                                        <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
+                                                    </a>
+                                                    <a href="wishlist.html" title="Add To Wishlist">
+                                                        <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
+                                                    </a>
+                                                    <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                                        <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-title">
+                                                    <h4 class="title-2"> <a href="product-details.html">Bunga mekar</a></h4>
+                                                </div>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <div class="price-box">
+                                                    <span class="regular-price ">Rp250.000</span>
+                                                    <span class="old-price"><del>Rp350.000</del></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Single Product End-->
+                                    </div>
+                                    <div class="single-item swiper-slide">
+                                        <!--Single Product Start-->
+                                        <div class="single-product position-relative mb-30">
+                                            <div class="product-image">
+                                                <a class="d-block" href="product-details.html">
+                                                    <img src="assets/images/product/3.jpg" alt="" class="product-image-1 w-100">
+                                                    <img src="assets/images/product/4.jpg" alt="" class="product-image-2 position-absolute w-100">
+                                                </a>
+                                                <div class="add-action d-flex flex-column position-absolute">
+                                                    <a href="compare.html" title="Compare">
+                                                        <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
+                                                    </a>
+                                                    <a href="wishlist.html" title="Add To Wishlist">
+                                                        <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
+                                                    </a>
+                                                    <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                                        <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-title">
+                                                    <h4 class="title-2"> <a href="product-details.html">Tongkat bunga merah</a></h4>
+                                                </div>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <div class="price-box">
+                                                    <span class="regular-price ">Rp250.000</span>
+                                                    <span class="old-price"><del>Rp350.000</del></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Single Product End-->
+                                    </div>
+                                    <div class="single-item swiper-slide">
+                                        <!--Single Product Start-->
+                                        <div class="single-product position-relative mb-30">
+                                            <div class="product-image">
+                                                <a class="d-block" href="product-details.html">
+                                                    <img src="assets/images/product/8.jpg" alt="" class="product-image-1 w-100">
+                                                    <img src="assets/images/product/7.jpg" alt="" class="product-image-2 position-absolute w-100">
+                                                </a>
+                                                <div class="add-action d-flex flex-column position-absolute">
+                                                    <a href="compare.html" title="Compare">
+                                                        <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
+                                                    </a>
+                                                    <a href="wishlist.html" title="Add To Wishlist">
+                                                        <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
+                                                    </a>
+                                                    <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                                        <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Quick View"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-title">
+                                                    <h4 class="title-2"> <a href="product-details.html">Buket mawar putih</a></h4>
+                                                </div>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <div class="price-box">
+                                                    <span class="regular-price ">Rp250.000</span>
+                                                    <span class="old-price"><del>Rp350.000</del></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Single Product End-->
+                                    </div>
+                                </div>
+                                <!-- Slider pagination -->
+                                <div class="swiper-pagination default-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Countdown Area End Here -->
+            <!-- History Area Start Here -->
+
+            <!-- Slider Navigation -->
+
         </div>
     </div>
-    <!-- Product Countdown Area End Here -->
-    <!-- History Area Start Here -->
-   
-                        <!-- Slider Navigation -->
-                     
-            </div>
-        </div>
     </div>
     <!-- Brand Logo Area End Here -->
     <!--Footer Area Start-->
@@ -815,14 +814,14 @@
                                     <li>
                                         <a class="rounded-circle" href="https://www.instagram.com/skyna.studio?igsh=cTN6enJqb3pmZHY=" title="Instagram">
                                             <i class="fa fa-instagram"></i>
-                                        </a> 
-                                  
+                                        </a>
+
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Informasi Kontak -->
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-custom">
                         <div class="single-footer-widget">
@@ -836,7 +835,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Foto Tambahan dengan Ukuran Lebih Besar -->
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-custom">
                         <div class="single-footer-widget text-center">
@@ -847,24 +846,24 @@
             </div>
         </div>
     </footer>
-    
-    
-        <div class="footer-copyright-area">
-            <div class="container custom-area">
-                <div class="row">
-                    <div class="col-12 text-center col-custom">
-                        <div class="copyright-content">
-                            <p>Copyright © 2024 Skyna Studio</p>
-                        </div>
+
+
+    <div class="footer-copyright-area">
+        <div class="container custom-area">
+            <div class="row">
+                <div class="col-12 text-center col-custom">
+                    <div class="copyright-content">
+                        <p>Copyright © 2024 Skyna Studio</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </footer>
     <!--Footer Area End-->
 
     <!-- Modal -->
-  
+
 
     <!-- Scroll to Top Start -->
     <a class="scroll-to-top" href="#">
@@ -905,4 +904,5 @@
 
 
 <!-- Mirrored from htmldemo.net/flosun/flosun/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:14 GMT -->
+
 </html>

@@ -7,7 +7,7 @@ include '../popup.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $product = $conn->query("SELECT * FROM produk WHERE id = $id")->fetch_assoc(); // Fungsi untuk mengambil data produk berdasarkan ID
+    $product = $conn->query("SELECT * FROM produk WHERE id = $id")->fetch_assoc();
 
     if (!$product) {
         echo '<div class="alert alert-danger">Produk tidak ditemukan!</div>';
@@ -20,21 +20,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $kategori = $_POST['kategori'];
     $harga = $_POST['harga'];
     $diskon = $_POST['diskon'];
+    $promo = $_POST['promo'];
     $foto_lama = $_POST['foto_lama'];
-    $foto_baru = $_FILES['foto'];
+    $fileInputName = 'foto'; // Nama input file
+    $targetDirectory = '../uploads/'; // Direktori penyimpanan foto
 
-    $foto = $foto_lama;
-    if ($foto_baru['name']) {
-        $foto = uploadImage('foto', '../uploads', $foto_lama);
-    }
+    // Gunakan fungsi updateProduct()
+    $isUpdated = updateProduct($id, $nama_produk, $kategori, $promo, $harga, $diskon, $fileInputName, $targetDirectory, $foto_lama);
 
-    if (updateProduct($id, $nama_produk, $kategori, $harga, $diskon, 'foto', '../uploads', $foto_lama)) {
+    if ($isUpdated) {
         header('Location: index.php');
         exit;
+    } else {
+        echo '<div class="alert alert-danger">Gagal memperbarui produk!</div>';
     }
 }
 
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -109,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input class="form-control form-control-dark w-100" type="text" placeholder="SKYNA STUDIO" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#"><span data-feather="arrow-left"></span>Log out</a>
+                <a class="nav-link px-3" href="#"><span data-feather="log-out"></span>Log out</a>
             </div>
         </div>
     </header>
@@ -122,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link active" aria-current="page" href="../">
+                                <a class="nav-link" aria-current="page" href="../">
                                     <span data-feather="home"></span>
                                     Dashboard
                                 </a>
@@ -138,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="index.php">
+                                <a class="nav-link active" href="index.php">
                                     <span data-feather="package"></span>
                                     Products
                                 </a>
@@ -146,17 +149,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../logo/header.php">
                                     <span data-feather="image"></span>
-                                    Logo Header
-                                </a>
-                            </h5>
-                        </li>
-                        <li class="nav-item">
-                            <h5>
-                                <a class="nav-link" href="#">
-                                    <span data-feather="image"></span>
-                                    Logo Footer
+                                    Logo
                                 </a>
                             </h5>
                         </li>
@@ -192,6 +187,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <option value="<?= $category['kategori']; ?>" <?= $product['kategori'] == $category['kategori'] ? 'selected' : ''; ?>><?= $category['kategori']; ?></option>
                                         <?php endforeach ?>
                                     </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="promo" class="form-label">Promo</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="promo" id="flexRadioDefault1" value="iya" <?php echo ($product['promo'] == 'iya') ? 'checked' : ''; ?>>
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Jadikan Promo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="promo" id="flexRadioDefault2" value="tidak" <?php echo ($product['promo'] == 'tidak') ? 'checked' : ''; ?>>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Bukan Promo
+                                        </label>
+                                    </div>
                                 </div>
 
                                 <div class="mb-3">

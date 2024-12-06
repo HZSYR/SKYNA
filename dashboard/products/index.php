@@ -16,7 +16,7 @@ include '../popup.php';
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Dashboard Template · Bootstrap v5.0</title>
+    <title>List Product</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -80,7 +80,7 @@ include '../popup.php';
         <input class="form-control form-control-dark w-100" type="text" placeholder="SKYNA STUDIO" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#"><span data-feather="arrow-left"></span>Log out</a>
+                <a class="nav-link px-3" href="#"><span data-feather="log-out"></span>Log out</a>
             </div>
         </div>
     </header>
@@ -93,7 +93,7 @@ include '../popup.php';
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link active" aria-current="page" href="../">
+                                <a class="nav-link" aria-current="page" href="../">
                                     <span data-feather="home"></span>
                                     Dashboard
                                 </a>
@@ -109,7 +109,7 @@ include '../popup.php';
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="index.php">
+                                <a class="nav-link active" href="index.php">
                                     <span data-feather="package"></span>
                                     Products
                                 </a>
@@ -117,17 +117,9 @@ include '../popup.php';
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="../logo/header.php">
                                     <span data-feather="image"></span>
-                                    Logo Header
-                                </a>
-                            </h5>
-                        </li>
-                        <li class="nav-item">
-                            <h5>
-                                <a class="nav-link" href="#">
-                                    <span data-feather="image"></span>
-                                    Logo Footer
+                                    Logo 
                                 </a>
                             </h5>
                         </li>
@@ -146,6 +138,7 @@ include '../popup.php';
                             <th>No</th>
                             <th>Nama Produk</th>
                             <th>Kategori</th>
+                            <th>Promo</th>
                             <th>Harga</th>
                             <th>Diskon</th>
                             <th>Foto</th>
@@ -163,6 +156,7 @@ include '../popup.php';
                                     <td><?= $no++; ?></td>
                                     <td><?= htmlspecialchars($product['nama_produk']); ?></td>
                                     <td><?= htmlspecialchars($product['kategori']); ?></td>
+                                    <td><?= htmlspecialchars($product['promo']); ?></td>
                                     <td>Rp <?= number_format($product['harga'], 0, ',', '.'); ?></td>
                                     <td><span class="discount-badge"><?= $product['diskon']; ?>%</span></td>
                                     <td>
@@ -205,7 +199,7 @@ include '../popup.php';
                                     <div class="mb-3">
                                         <label for="kategori" class="form-label">Kategori</label>
                                         <select class="form-select" id="kategori" name="kategori" required>
-                                            <option value="tidak ada" disabled>Pilih Kategori</option>
+                                            <option value="tidak ada" disabled selected>Pilih Kategori</option>
                                             <?php foreach ($categories as $category) : ?>
                                                 <option value="<?= $category['kategori']; ?>"><?= $category['kategori']; ?></option>
                                             <?php endforeach; ?>
@@ -222,6 +216,23 @@ include '../popup.php';
                                     <div class="mb-3">
                                         <label for="diskon" class="form-label">Diskon (%)</label>
                                         <input type="number" class="form-control" id="diskon" name="diskon" required>
+                                    </div>
+
+                                    <!-- Promo -->
+                                    <div class="mb-3">
+                                        <label for="promo" class="form-label">Promo</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="promo" id="flexRadioDefault1" value="iya">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Jadikan Promo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="promo" id="flexRadioDefault2" checked value="tidak">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Bukan Promo
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <!-- Foto -->

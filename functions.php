@@ -81,9 +81,25 @@ function getTableData($tableName)
     return $data;
 }
 
+function getPromoData($table, $where = null)
+{
+    global $conn;
 
+    $query = "SELECT * FROM $table";
+    if ($where) {
+        $query .= " WHERE $where";
+    }
+
+    $result = mysqli_query($conn, $query);
+    $data = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
+
+    return $data;
+}
 // produk
-function addProduct($nama_produk, $kategori, $harga, $diskon, $fileInputName, $targetDirectory)
+function addProduct($nama_produk, $kategori, $promo, $harga, $diskon,  $fileInputName, $targetDirectory)
 {
     global $conn;
 
@@ -94,9 +110,9 @@ function addProduct($nama_produk, $kategori, $harga, $diskon, $fileInputName, $t
     }
 
     // Query untuk menambahkan produk
-    $query = "INSERT INTO produk (nama_produk, kategori, harga, diskon, foto) VALUES (?, ?, ?, ?, ?)";
+    $query = "INSERT INTO produk (nama_produk, kategori,promo, harga, diskon, foto) VALUES (?,?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssdds", $nama_produk, $kategori, $harga, $diskon, $foto);
+    $stmt->bind_param("sssdss", $nama_produk, $kategori, $promo, $harga, $diskon, $foto);
 
     if ($stmt->execute()) {
         $_SESSION['message'] = "Produk berhasil ditambahkan.";
@@ -110,23 +126,33 @@ function addProduct($nama_produk, $kategori, $harga, $diskon, $fileInputName, $t
 }
 
 // Fungsi untuk mengupdate data produk
-function updateProduct($id, $nama_produk, $kategori, $harga, $diskon, $fileInputName, $targetDirectory, $oldFotoPath)
+function updateProduct($id, $nama_produk, $kategori, $promo, $harga, $diskon, $fileInputName, $targetDirectory, $oldFotoPath)
 {
     global $conn;
 
-    // Upload foto baru jika ada
+    // Default gunakan foto lama
     $foto = $oldFotoPath;
+
+    // Jika ada file baru diunggah
     if (!empty($_FILES[$fileInputName]['name'])) {
-        $foto = uploadImage($fileInputName, $targetDirectory, $oldFotoPath);
+        // Hapus foto lama jika ada
+        if (!empty($oldFotoPath) && file_exists($targetDirectory . $oldFotoPath)) {
+            unlink($targetDirectory . $oldFotoPath);
+        }
+
+        // Unggah foto baru
+        $foto = uploadImage($fileInputName, $targetDirectory);
         if (!$foto) {
+            $_SESSION['message'] = "Gagal mengunggah foto baru!";
+            $_SESSION['message_type'] = 'error';
             return false;
         }
     }
 
     // Query untuk mengupdate produk
-    $query = "UPDATE produk SET nama_produk = ?, kategori = ?, harga = ?, diskon = ?, foto = ? WHERE id = ?";
+    $query = "UPDATE produk SET nama_produk = ?, kategori = ?, promo = ?, harga = ?, diskon = ?, foto = ? WHERE id = ?";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssddsi", $nama_produk, $kategori, $harga, $diskon, $foto, $id);
+    $stmt->bind_param("sssddsi", $nama_produk, $kategori, $promo, $harga, $diskon, $foto, $id);
 
     if ($stmt->execute()) {
         $_SESSION['message'] = "Produk berhasil diperbarui.";
@@ -138,6 +164,7 @@ function updateProduct($id, $nama_produk, $kategori, $harga, $diskon, $fileInput
         return false;
     }
 }
+
 
 // Fungsi untuk menghapus data produk
 function deleteProduct($id, $fotoPath)
@@ -164,6 +191,7 @@ function deleteProduct($id, $fotoPath)
         return false;
     }
 }
+
 function addCategory($kategori)
 {
     global $conn;
@@ -221,6 +249,35 @@ function deleteCategory($id)
         return true;
     } else {
         $_SESSION['message'] = "Gagal menghapus kategori: " . $stmt->error;
+        $_SESSION['message_type'] = 'error';
+        return false;
+    }
+}
+
+function updateLogo($id, $fileInputName, $targetDirectory, $oldFotoPath)
+{
+    global $conn;
+
+    // Upload foto baru jika ada
+    $foto = $oldFotoPath;
+    if (!empty($_FILES[$fileInputName]['name'])) {
+        $foto = uploadImage($fileInputName, $targetDirectory, $oldFotoPath);
+        if (!$foto) {
+            return false;
+        }
+    }
+
+    // Query untuk mengupdate Logo
+    $query = "UPDATE logo SET logo = ? WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("si", $foto, $id);
+
+    if ($stmt->execute()) {
+        $_SESSION['message'] = "Logo berhasil diperbarui.";
+        $_SESSION['message_type'] = 'success';
+        return true;
+    } else {
+        $_SESSION['message'] = "Gagal memperbarui Logo: " . $stmt->error;
         $_SESSION['message_type'] = 'error';
         return false;
     }

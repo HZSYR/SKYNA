@@ -6,9 +6,10 @@ if (isset($_POST['add'])) {
     $kategori = $_POST['kategori'];
     $harga = $_POST['harga'];
     $diskon = $_POST['diskon'];
+    $promo = $_POST['promo'];
     $targetDirectory = "../uploads/";
 
-    addProduct($nama_produk, $kategori, $harga, $diskon, 'foto', $targetDirectory);
+    addProduct($nama_produk, $kategori, $promo, $harga, $diskon,  'foto', $targetDirectory);
 }
 
 header("Location: index.php");

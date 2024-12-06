@@ -2,7 +2,8 @@
 include '../functions.php';
 $admins = getTableData('admin');
 $category = getTableData('kategori');
-$promo = getTableData('promo');
+$promo = getTableData('produk', 'promo = "iya"');
+$totalPromo = count($promo);
 
 ?>
 
@@ -15,7 +16,7 @@ $promo = getTableData('promo');
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.84.0">
-  <title>Dashboard Template · Bootstrap v5.0</title>
+  <title>Dashboard Skyna Studio</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -91,17 +92,9 @@ $promo = getTableData('promo');
             </li>
             <li class="nav-item">
               <h5>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="logo/header.php">
                   <span data-feather="image"></span>
-                  Logo Header
-                </a>
-              </h5>
-            </li>
-            <li class="nav-item">
-              <h5>
-                <a class="nav-link" href="#">
-                  <span data-feather="image"></span>
-                  Logo Footer
+                  Logo
                 </a>
               </h5>
             </li>
