@@ -1,8 +1,6 @@
 <?php
 include '../../functions.php';
-$products = getTableData('produk');
 $categories = getTableData('kategori');
-$admin = getTableData('admin');
 
 include '../popup.php';
 ?>
@@ -16,7 +14,7 @@ include '../popup.php';
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Dashboard Template · Bootstrap v5.0</title>
+    <title>Category List</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -101,7 +99,7 @@ include '../popup.php';
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="../category/">
+                                <a class="nav-link" href="index.php">
                                     <span data-feather="grid"></span>
                                     Category
                                 </a>
@@ -109,7 +107,7 @@ include '../popup.php';
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="index.php">
+                                <a class="nav-link" href="../products/">
                                     <span data-feather="package"></span>
                                     Products
                                 </a>
@@ -137,40 +135,30 @@ include '../popup.php';
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Product List</h1>
+                    <h1 class="h2">Daftar Kategori</h1>
                 </div>
 
                 <table class="table table-bordered product-table">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Produk</th>
-                            <th>Kategori</th>
-                            <th>Harga</th>
-                            <th>Diskon</th>
-                            <th>Foto</th>
+                            <th>Nama Kategori</th>
                             <th>aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         $no = 1;
-                        if (count($products) == 0) {
+                        if (count($categories) == 0) {
                             echo "<tr><td colspan='7' class='text-center'>Data Produk Kosong</td></tr>";
                         } else {
-                            foreach ($products as $product) : ?>
+                            foreach ($categories as $category) : ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
-                                    <td><?= htmlspecialchars($product['nama_produk']); ?></td>
-                                    <td><?= htmlspecialchars($product['kategori']); ?></td>
-                                    <td>Rp <?= number_format($product['harga'], 0, ',', '.'); ?></td>
-                                    <td><span class="discount-badge"><?= $product['diskon']; ?>%</span></td>
-                                    <td>
-                                        <img src="../uploads/<?= $product['foto']; ?>" alt="Foto Produk" class="product-image">
-                                    </td>
+                                    <td><?= htmlspecialchars($category['kategori']); ?></td>
                                     <td class="action-buttons">
-                                        <a href="edit.php?id=<?= $product['id']; ?>" class="btn btn-warning btn-sm"><i data-feather="edit" style="width: 16px; height: 16px"></i></a>
-                                        <a href="hapus.php?id=<?= $product['id']; ?>&foto=<?= $product['foto']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                        <a href="edit.php?id=<?= $category['id']; ?>" class="btn btn-warning btn-sm"><i data-feather="edit" style="width: 16px; height: 16px"></i></a>
+                                        <a href="hapus.php?id=<?= $category['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                             <i data-feather="trash-2" style="width: 16px; height: 16px"></i>
                                         </a>
                                     </td>
@@ -181,53 +169,23 @@ include '../popup.php';
                 </table>
 
                 <!-- Button to trigger modal -->
-                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
                     Tambah Data
                 </button>
 
                 <!-- Modal for adding data -->
-                <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="addProductModalLabel">Tambah Data Produk</h5>
+                                <h5 class="modal-title" id="addCategoryModalLabel">Tambah Data Kategori</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <form action="tambah.php" method="POST" enctype="multipart/form-data">
+                            <form action="tambah.php" method="POST">
                                 <div class="modal-body">
-                                    <!-- Nama Produk -->
                                     <div class="mb-3">
-                                        <label for="nama_produk" class="form-label">Nama Produk</label>
-                                        <input type="text" class="form-control" id="nama_produk" name="nama_produk" required>
-                                    </div>
-
-                                    <!-- Kategori -->
-                                    <div class="mb-3">
-                                        <label for="kategori" class="form-label">Kategori</label>
-                                        <select class="form-select" id="kategori" name="kategori" required>
-                                            <option value="tidak ada" disabled>Pilih Kategori</option>
-                                            <?php foreach ($categories as $category) : ?>
-                                                <option value="<?= $category['kategori']; ?>"><?= $category['kategori']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <!-- Harga -->
-                                    <div class="mb-3">
-                                        <label for="harga" class="form-label">Harga</label>
-                                        <input type="number" class="form-control" id="harga" name="harga" required>
-                                    </div>
-
-                                    <!-- Diskon -->
-                                    <div class="mb-3">
-                                        <label for="diskon" class="form-label">Diskon (%)</label>
-                                        <input type="number" class="form-control" id="diskon" name="diskon" required>
-                                    </div>
-
-                                    <!-- Foto -->
-                                    <div class="mb-3">
-                                        <label for="foto" class="form-label">Foto Produk</label>
-                                        <input type="file" class="form-control" id="foto" name="foto" accept="image/*" required>
+                                        <label for="category" class="form-label">Nama Kategori</label>
+                                        <input type="text" class="form-control" id="category" name="category" required>
                                     </div>
                                 </div>
                                 <div class="modal-footer">

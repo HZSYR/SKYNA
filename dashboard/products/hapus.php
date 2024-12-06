@@ -1,5 +1,4 @@
 <?php
-session_start();
 include '../../functions.php';
 
 if (isset($_GET['id']) && isset($_GET['foto'])) {

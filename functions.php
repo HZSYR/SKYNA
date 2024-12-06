@@ -81,6 +81,7 @@ function getTableData($tableName)
     return $data;
 }
 
+
 // produk
 function addProduct($nama_produk, $kategori, $harga, $diskon, $fileInputName, $targetDirectory)
 {
@@ -159,6 +160,67 @@ function deleteProduct($id, $fotoPath)
         return true;
     } else {
         $_SESSION['message'] = "Gagal menghapus produk: " . $stmt->error;
+        $_SESSION['message_type'] = 'error';
+        return false;
+    }
+}
+function addCategory($kategori)
+{
+    global $conn;
+
+    // Query untuk menambahkan kategori
+    $query = "INSERT INTO kategori (kategori) VALUES (?)";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $kategori);
+
+    if ($stmt->execute()) {
+        $_SESSION['message'] = "Kategori berhasil ditambahkan.";
+        $_SESSION['message_type'] = 'success';
+        return true;
+    } else {
+        $_SESSION['message'] = "Gagal menambahkan kategori: " . $stmt->error;
+        $_SESSION['message_type'] = 'error';
+        return false;
+    }
+}
+
+// Fungsi untuk mengupdate data Kategori
+function updateCategory($id, $kategori)
+{
+    global $conn;
+
+    // Query untuk mengupdate kategori
+    $query = "UPDATE kategori SET kategori = ? WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("si", $kategori, $id);
+
+    if ($stmt->execute()) {
+        $_SESSION['message'] = "Kategori berhasil diperbarui.";
+        $_SESSION['message_type'] = 'success';
+        return true;
+    } else {
+        $_SESSION['message'] = "Gagal memperbarui kategori: " . $stmt->error;
+        $_SESSION['message_type'] = 'error';
+        return false;
+    }
+}
+
+// Fungsi untuk menghapus data produk
+function deleteCategory($id)
+{
+    global $conn;
+
+    // Query untuk menghapus kategori
+    $query = "DELETE FROM kategori WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $id);
+
+    if ($stmt->execute()) {
+        $_SESSION['message'] = "Kategori berhasil dihapus.";
+        $_SESSION['message_type'] = 'success';
+        return true;
+    } else {
+        $_SESSION['message'] = "Gagal menghapus kategori: " . $stmt->error;
         $_SESSION['message_type'] = 'error';
         return false;
     }

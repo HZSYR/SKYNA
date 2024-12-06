@@ -1,5 +1,4 @@
-<?php 
-session_start();
+<?php
 include '../functions.php';
 $admins = getTableData('admin');
 $category = getTableData('kategori');
@@ -76,7 +75,7 @@ $promo = getTableData('promo');
             </li>
             <li class="nav-item">
               <h5>
-                <a class="nav-link" href="products/index.php">
+                <a class="nav-link" href="category">
                   <span data-feather="grid"></span>
                   Category
                 </a>
