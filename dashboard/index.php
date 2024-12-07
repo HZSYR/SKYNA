@@ -5,6 +5,7 @@ $category = getTableData('kategori');
 $promo = getTableData('produk', 'promo = "iya"');
 $totalPromo = count($promo);
 
+include 'popup.php';
 ?>
 
 <!doctype html>
@@ -39,6 +40,31 @@ $totalPromo = count($promo);
         font-size: 3.5rem;
       }
     }
+
+    .product-table th {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+    }
+
+    .product-table td {
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .discount-badge {
+      background-color: #ffc107;
+      color: black;
+      padding: 0.25em 0.5em;
+      border-radius: 5px;
+    }
   </style>
 
 
@@ -53,11 +79,7 @@ $totalPromo = count($promo);
       <span class="navbar-toggler-icon"></span>
     </button>
     <input class="form-control form-control-dark w-100" type="text" placeholder="SKYNA STUDIO" aria-label="Search">
-    <div class="navbar-nav">
-      <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="#"><span data-feather="arrow-left"></span>Log out</a>
-      </div>
-    </div>
+    <?php include 'head.php'; ?>
   </header>
 
   <div class="container-fluid">
@@ -135,6 +157,75 @@ $totalPromo = count($promo);
 
     </div>
     </main>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Product List</h1>
+      </div>
+
+      <table class="table table-bordered product-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Email</th>
+            <th>aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          $no = 1;
+          if (count($admins) == 0) {
+            echo "<tr><td colspan='7' class='text-center'>Data Admin Kosong</td></tr>";
+          } else {
+            foreach ($admins as $admin) : ?>
+              <tr>
+                <td><?= $no++; ?></td>
+                <td><?= htmlspecialchars($admin['email']); ?></td>
+                <td class="action-buttons">
+                  <a href="deleteAdmin.php?id=<?= $admin['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                    <i data-feather="trash-2" style="width: 16px; height: 16px"></i>
+                  </a>
+                </td>
+              </tr>
+          <?php endforeach;
+          } ?>
+        </tbody>
+      </table>
+
+      <!-- Button to trigger modal -->
+      <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addAdminModal">
+        Tambah Admin
+      </button>
+
+      <!-- Modal for adding data -->
+      <div class="modal fade" id="addAdminModal" tabindex="-1" aria-labelledby="addAdminModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addAdminModalLabel">Tambah Data Admin</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="addAdmin.php" method="POST"">
+              <div class=" modal-body">
+              <!-- Nama Produk -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <!-- password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-primary" name="add_admin">Simpan</button>
+          </div>
+          </form>
+        </div>
+      </div>
+  </div>
   </div>
   </div>
 

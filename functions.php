@@ -1,5 +1,10 @@
 <?php
 session_start();
+// isLoggedIn();
+
+if ($_SESSION) {
+    # code...
+}
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -280,5 +285,108 @@ function updateLogo($id, $fileInputName, $targetDirectory, $oldFotoPath)
         $_SESSION['message'] = "Gagal memperbarui Logo: " . $stmt->error;
         $_SESSION['message_type'] = 'error';
         return false;
+    }
+}
+
+function addAdmin($email, $password)
+{
+    global $conn;
+
+    // Cek apakah email sudah ada di database
+    $query = "SELECT COUNT(*) AS count FROM admin WHERE email = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = $result->fetch_assoc();
+
+    if ($data['count'] > 0) {
+        $_SESSION['message'] = "Email sudah terdaftar!";
+        $_SESSION['message_type'] = 'error';
+        header('Location: index.php');
+        return false;
+    }
+
+    // Hash password sebelum disimpan
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+    // Query untuk menambahkan admin baru
+    $query = "INSERT INTO admin (email, password) VALUES (?, ?)";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ss", $email, $hashedPassword);
+
+    if ($stmt->execute()) {
+        $_SESSION['message'] = "Admin berhasil ditambahkan.";
+        $_SESSION['message_type'] = 'success';
+        return true;
+    } else {
+        $_SESSION['message'] = "Gagal menambahkan admin: " . $stmt->error;
+        $_SESSION['message_type'] = 'error';
+        return false;
+    }
+}
+
+function deleteAdmin($id)
+{
+    global $conn;
+
+    // Query untuk menghapus admin berdasarkan ID
+    $query = "DELETE FROM admin WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $id);
+
+    if ($stmt->execute()) {
+        $_SESSION['message'] = "Admin berhasil dihapus.";
+        $_SESSION['message_type'] = 'success';
+        return true;
+    } else {
+        $_SESSION['message'] = "Gagal menghapus admin: " . $stmt->error;
+        $_SESSION['message_type'] = 'error';
+        return false;
+    }
+}
+
+function loginAdmin($email, $password)
+{
+    global $conn;
+
+    // Query untuk mencari admin berdasarkan email
+    $query = "SELECT * FROM admin WHERE email = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Periksa apakah admin ditemukan
+    if ($result->num_rows === 1) {
+        $admin = $result->fetch_assoc();
+
+        // Verifikasi password
+        if (password_verify($password, $admin['password'])) {
+            // Set session login
+            $_SESSION['admin_id'] = $admin['id'];
+            $_SESSION['admin_email'] = $admin['email'];
+            $_SESSION['message'] = "Login berhasil!";
+            $_SESSION['message_type'] = 'success';
+            return true;
+        } else {
+            $_SESSION['message'] = "Password salah!";
+            $_SESSION['message_type'] = 'error';
+            return false;
+        }
+    } else {
+        $_SESSION['message'] = "Email tidak ditemukan!";
+        $_SESSION['message_type'] = 'error';
+        return false;
+    }
+}
+
+function isLoggedIn()
+{
+    if (!isset($_SESSION['admin_id'])) {
+        $_SESSION['message'] = "Silakan login terlebih dahulu!";
+        $_SESSION['message_type'] = 'error';
+        header('Location: login.php');
+        exit;
     }
 }

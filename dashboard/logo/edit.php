@@ -121,11 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <span class="navbar-toggler-icon"></span>
         </button>
         <input class="form-control form-control-dark w-100" type="text" placeholder="SKYNA STUDIO" aria-label="Search">
-        <div class="navbar-nav">
-            <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#"><span data-feather="log-out"></span>Log out</a>
-            </div>
-        </div>
+        <?php include '../head.php'; ?>
     </header>
 
     <div class="container-fluid">
