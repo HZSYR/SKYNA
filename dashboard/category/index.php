@@ -126,7 +126,7 @@ include '../popup.php';
                     <h1 class="h2">Daftar Kategori</h1>
                 </div>
 
-                <table class="table table-bordered product-table">
+                <table class="table table-bordered product-table shadow-sm">
                     <thead>
                         <tr>
                             <th>No</th>

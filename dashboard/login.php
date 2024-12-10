@@ -1,5 +1,9 @@
 <?php
 include '../functions.php';
+if (isset($_SESSION['admin_id'])) {
+  header('Location: index.php');
+  exit;
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -80,7 +84,7 @@ include 'popup.php';
         </label>
       </div> -->
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2024</p>
+      <a href ="index.php"><p class="mt-5 mb-3 text-muted">&copy; 2024</p></a>
     </form>
   </main>
 

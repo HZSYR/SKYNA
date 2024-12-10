@@ -5862,9 +5862,10 @@ mark {
 }
 
 .slide-bg-1 {
-  min-height: 890px;
+  background-image: url('path/to/your/new-image.jpg'); /* Ganti dengan path gambar baru */
+  background-size: cover; /* Agar gambar menutupi seluruh area */
+  background-position: center; /* Agar gambar terpusat */
 }
-
 @media (max-width: 1800px) {
   .slide-bg-1 {
     min-height: 800px;
@@ -5948,12 +5949,12 @@ mark {
 }
 
 .slide-1 {
-  background-image: url("../images/slider/1-1.jpg");
+  background-image: url("../images/slider/.jpg");
   background-color: rgba(215, 177, 190, 0.9);
 }
 
 .slide-2 {
-  background-image: url("../images/slider/1-2.jpg");
+  background-image: url("../images/slider/.jpg");
   background-color: rgba(215, 177, 190, 0.9);
 }
 

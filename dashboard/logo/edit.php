@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link" href="index.php">
+                                <a class="nav-link" href="../products/">
                                     <span data-feather="package"></span>
                                     Products
                                 </a>
@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </li>
                         <li class="nav-item">
                             <h5>
-                                <a class="nav-link active" href="../logo/header.php">
+                                <a class="nav-link active" href="header.php">
                                     <span data-feather="image"></span>
                                     Logo
                                 </a>
@@ -171,7 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h1 class="h2">Edit Foto Logo</h1>
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-8 shadow-sm">
                     <div class="card">
                         <div class="card-header bg-primary text-white">Edit Foto Logo</div>
                         <div class="card-body">

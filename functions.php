@@ -2,13 +2,10 @@
 session_start();
 // isLoggedIn();
 
-if ($_SESSION) {
-    # code...
-}
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "skyna-studio";
+$dbname = "skyna_studio";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

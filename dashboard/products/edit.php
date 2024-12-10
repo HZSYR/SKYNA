@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header bg-primary text-white">Edit Produk</div>
-                        <div class="card-body">
+                        <div class="card-body shadow-sm">
 
                             <form action="" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="foto_lama" value="<?= $product['foto']; ?>">
